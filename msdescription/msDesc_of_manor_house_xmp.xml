@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+  href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng"
+  schematypens="http://relaxng.org/ns/structure/1.0"
+  type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="basic_ms_sample2">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Basic Manuscript Encoding Sample</title>
+        <author xml:id="jf">
+          <persName ref="/path/to/WWP/personography.xml#jflanders.lfw">Julia Flanders</persName>
+        </author>
+        <respStmt xml:id="sb">
+          <resp>encoder</resp>
+          <persName ref="/path/to/WWP/personography.xml#sbauman.emt">Syd Bauman</persName>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <availability status="">
+          <ab>Copyleft 2010 Syd Bauman and the Women Writers Project</ab>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <!-- much of the manuscript description is fictional -->
+        <msDesc>
+          <msIdentifier>
+            <country>United States of America</country>
+            <settlement>Providence</settlement>
+            <institution>Brown University Library</institution>
+            <repository>Center for Digitial Scholarship</repository>
+            <collection>TEI Teaching Materials</collection>
+            <msName>Basic MS Sample 06</msName>
+          </msIdentifier>
+          <msContents>
+            <summary>Only 1 page which represents the entirety of chapter 1 is extant.</summary>
+            <textLang mainLang="en" otherLangs="fr"> The document is written in English with
+              scattered short French passages with which to demonstrate the use of
+                <att>xml:lang</att>
+            </textLang>
+            <msItemStruct>
+              <author>
+                <persName ref="/path/to/WWP/personography.xml#jflanders.lfw">Julia
+                  Flanders</persName>
+              </author>
+              <incipit>Chapter 1: The Manor House</incipit>
+              <explicit>End of Chapter 1.</explicit>
+              <!-- <decoNote>* -->
+              <filiation>This text is a hand transcription of <ref
+                  target="http://www.wwp.neu.edu/encoding/current/presentations/html/basic_encoding_01.xhtml"
+                  >our basic encoding slide</ref> with some minor, but deliberate, changes by the
+                author to make it more suitable for teaching manuscript encoding.</filiation>
+              <note resp="#sb">The <gi>filiation</gi> element is really supposed to be about the
+                relationship of this manuscript to <cit>
+                  <quote>surviving manuscripts of the same text</quote>
+                  <ptr target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msfil"/>
+                </cit>.</note>
+            </msItemStruct>
+          </msContents>
+          <physDesc>
+            <objectDesc form="USLetter">
+              <supportDesc material="paper">
+                <support>standard US copy machine paper, white</support>
+                <extent>The original is 1 page, which has fewer than 750 characters</extent>
+                <foliation>There is no page numbering or other sequencing information</foliation>
+                <collation>Single leaf</collation>
+                <condition>Deliberately damaged with 2 coffee stains near the bottom of the written
+                  portion of the page. One is light, through which text can easily be seen, the
+                  other is dark and obscures the underlying text somewhat.</condition>
+              </supportDesc>
+              <layoutDesc>
+                <layout columns="1" writtenLines="16">No ruling, no pricking</layout>
+              </layoutDesc>
+            </objectDesc>
+            <handDesc hands="2">
+              <summary>Written in two contemporary hands, although that of the major contributor is
+                occasionally in blue ink.</summary>
+              <handNote xml:id="jflanders_blue" script="cursive" medium="ink-blue" scope="minor"
+                scribe="jflanders.lfw"/>
+              <handNote xml:id="jflanders_black" script="cursive" medium="ink-black" scope="major"
+                scribe="jflanders.lfw"/>
+              <handNote xml:id="sbauman_black" script="printing" medium="ink-black" scope="minor"
+                scribe="sbauman.emt"/>
+            </handDesc>
+            <accMat>This sample is included as part of the WWP <ref
+                target="file:///Users/syd/Documents/WWPweb/encoding/current/presentations/html/basic_manuscript_encoding_00.xhtml"
+                >presentation on basic MS encoding</ref>.</accMat>
+          </physDesc>
+          <history>
+            <origin>The manuscript was created on or about <date when="2010-09-22">Wed 22 Sep
+                2010</date></origin>
+            <provenance><!-- fictional -->The manuscript was part of <persName>Dot
+              Porter</persName>’s personal collection of J. Flanders memorabilia before it was
+              stolen.</provenance>
+            <provenance><!-- fictional -->After the FBI recovered the manuscript, it was held in
+              Langley, VA for <date when-iso="P17M" precision="medium">~17
+              months</date>.</provenance>
+            <acquisition><!-- fictional -->After the trial was over, <persName>Dot Porter</persName>
+              asked the FBI to send the manuscript to the <name type="org">Center for Digital
+                Scholarship</name>; it arrived <date when="2010-09-23">Thu 23 Sep
+              2010</date>.</acquisition>
+          </history>
+          <additional>
+            <adminInfo>
+              <recordHist>
+                <source>invented by <persName ref="#sb">Syd</persName></source>
+              </recordHist>
+              <availability status="restricted">
+                <p>Copyleft 2010 by Julia Flanders and the Women Writers Project</p>
+                <p>While there are currently no restrictions on viewing the manuscript, it is only
+                  circulated among participants in WWP manuscript encoding workshops and
+                  seminars.</p>
+              </availability>
+            </adminInfo>
+            <surrogates>~5 photocopies were made on <date when="2010-09-24">the first day of the
+                first introductory workshop</date>.</surrogates>
+          </additional>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2010-09-24" who="#sb">created</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface facs="../presentations/gfx/basic_ms_sample2.pdf" n="1"/>
+  </facsimile>
+</TEI>
